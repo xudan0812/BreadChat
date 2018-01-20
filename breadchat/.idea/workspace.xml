@@ -66,11 +66,6 @@
               <item name="breadchat" type="b2602c69:ProjectViewProjectNode" />
               <item name="breadchat" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="breadchat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="breadchat" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -106,12 +101,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1516477302757</updated>
-      <workItem from="1516477306403" duration="691000" />
+      <workItem from="1516477306403" duration="904000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="691000" />
+    <option name="totallyTimeSpent" value="904000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="638" height="800" extended-state="0" />
