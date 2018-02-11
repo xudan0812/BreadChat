@@ -102,9 +102,9 @@
         {
           "libraryName": "antd-mobile",
           "style": "css"
-        },
-        "transform-decorators-legacy"
-      ]
+        }
+      ],
+      "transform-decorators-legacy"
     ]
   },
   "eslintConfig": {

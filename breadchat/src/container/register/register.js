@@ -26,11 +26,11 @@ class Register extends React.Component{
               labelNumber={10}
             >Confirm Password</InputItem>
             <WhiteSpace/>
-            <RadioItem checked={this.state.type=='genius'}>
+            <RadioItem checked={this.state.type==='genius'}>
               Genius
             </RadioItem>
             <WhiteSpace/>
-            <RadioItem checked={this.state.type=='boss'}>
+            <RadioItem checked={this.state.type==='boss'}>
               Boss
             </RadioItem>
           </List>
