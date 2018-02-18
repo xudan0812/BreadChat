@@ -1,5 +1,6 @@
 const express = require('express')
 const Router = express.Router()
+const utils = require('utility')
 const model = require('./model')
 const User = model.getModel('user')
 
@@ -14,7 +15,7 @@ Router.post('/register', function (req, res) {
     if (doc) {
       return res.json({code: 1, msg:"username already exists"})
     }
-    User.create({username, pwd, type}, function (e, d) {
+    User.create({username,type,pwd:md5Pwd(pwd)}, function (e, d) {
       if (e) {
         return res.json({code: 1, msg:"server error"})
       }
@@ -25,5 +26,10 @@ Router.post('/register', function (req, res) {
 Router.get('/info', function(req, res){
   return res.json({code: 1})
 })
+
+function md5Pwd(pwd) {
+  const salt = 'bread_talk_14756827!@#IOHSLJadijg'
+  return utils.md5(utils.md5(pwd+salt))
+}
 
 module.exports = Router
