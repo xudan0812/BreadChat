@@ -5,6 +5,7 @@ const model = require('./model')
 const User = model.getModel('user')
 
 Router.get('/list', function (req, res) {
+  // User.remove({}, function (e,d) {})
   User.find({}, function (err, doc) {
     return res.json(doc)
   })
@@ -21,6 +22,16 @@ Router.post('/register', function (req, res) {
       }
       return res.json({code: 0})
     })
+  })
+})
+Router.post('/login', function (req, res) {
+  const {username, pwd} = req.body
+  User.findOne({username, pwd: md5Pwd(pwd)},{'pwd': 0}, function (err, doc) {
+    if (doc) {
+      return res.json({code: 0, data: doc})
+    } else {
+      return res.json({code: 1, msg:"Wrong username or password"})
+    }
   })
 })
 Router.get('/info', function(req, res){

@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-const DB_URL = 'mongodb://localhost:32769/breadchat'
+const DB_URL = 'mongodb://localhost:32771/breadchat'
 mongoose.connect(DB_URL)
 
 const models = {
